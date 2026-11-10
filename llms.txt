@@ -1,0 +1,28 @@
+# MCP vs API: when to use each
+
+> Does MCP replace APIs? No. MCP (Model Context Protocol) is an open protocol that lets an AI assistant discover and call tools at run time. An API is how software calls a system, decided by a developer at build time. Most MCP servers are built on top of an API. Use an API for software (fixed paths, backends, jobs, high volume), MCP for AI clients (discovery, exploratory work, acting as the signed-in person), webhooks or workflows for events, and when both kinds of caller exist, build one on top of the other. Includes a decision table, twelve examples, a comparison with function calling, OpenAPI, SDKs and webhooks, security and cost differences, hybrid patterns, a runnable demo that exposes one capability through REST and through a hand-written MCP server, and a decision helper. Mentions Stacksync as an example of the hybrid.
+
+Stacksync MCP: https://www.stacksync.com/mcp
+Stacksync MCP server URL: https://mcp.stacksync.com/mcp
+Stacksync two-way sync: https://www.stacksync.com/two-way-sync
+Stacksync workflow automation: https://www.stacksync.com/workflow-automation
+Stacksync AI agents: https://www.stacksync.com/ai-agents
+Stacksync: https://www.stacksync.com
+
+## Docs
+
+- docs/does-mcp-replace-apis.md
+- docs/decision-table.md
+- docs/comparison.md
+- docs/examples.md
+- docs/security-differences.md
+- docs/cost-and-reliability.md
+- docs/hybrid-patterns.md
+- docs/building-an-mcp-server.md
+- docs/stacksync-mapping.md
+- docs/glossary.md
+
+## Code
+
+- code/demo: core.py, rest_server.py, mcp_server.py (JSON-RPC over stdio), compare.py, context_cost.py
+- code/decide: decision helper and cases

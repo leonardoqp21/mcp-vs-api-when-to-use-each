@@ -1,0 +1,159 @@
+[
+  {
+    "task": "A nightly job copies orders from the shop into the warehouse",
+    "answers": {
+      "ai_client_is_the_caller": false,
+      "code_is_the_caller": true,
+      "needs_discovery": false,
+      "must_be_deterministic": true,
+      "high_volume_or_latency_sensitive": true,
+      "acts_as_the_signed_in_person": false,
+      "exploratory_or_ad_hoc": false,
+      "an_api_already_exists": true,
+      "event_driven": false
+    },
+    "expected": [
+      "api"
+    ]
+  },
+  {
+    "task": "A support lead asks Claude which tickets are overdue and why",
+    "answers": {
+      "ai_client_is_the_caller": true,
+      "code_is_the_caller": false,
+      "needs_discovery": true,
+      "must_be_deterministic": false,
+      "high_volume_or_latency_sensitive": false,
+      "acts_as_the_signed_in_person": true,
+      "exploratory_or_ad_hoc": true,
+      "an_api_already_exists": false,
+      "event_driven": false
+    },
+    "expected": [
+      "mcp"
+    ]
+  },
+  {
+    "task": "You have a billing API and want AI assistants to use it",
+    "answers": {
+      "ai_client_is_the_caller": true,
+      "code_is_the_caller": false,
+      "needs_discovery": true,
+      "must_be_deterministic": false,
+      "high_volume_or_latency_sensitive": false,
+      "acts_as_the_signed_in_person": false,
+      "exploratory_or_ad_hoc": false,
+      "an_api_already_exists": true,
+      "event_driven": false
+    },
+    "expected": [
+      "mcp",
+      "mcp_wrapping_the_api"
+    ]
+  },
+  {
+    "task": "A backend service and an AI assistant both need your customer data",
+    "answers": {
+      "ai_client_is_the_caller": true,
+      "code_is_the_caller": true,
+      "needs_discovery": true,
+      "must_be_deterministic": true,
+      "high_volume_or_latency_sensitive": false,
+      "acts_as_the_signed_in_person": false,
+      "exploratory_or_ad_hoc": false,
+      "an_api_already_exists": true,
+      "event_driven": false
+    },
+    "expected": [
+      "api",
+      "mcp",
+      "mcp_wrapping_the_api",
+      "both"
+    ]
+  },
+  {
+    "task": "Notify Slack whenever a deal closes",
+    "answers": {
+      "ai_client_is_the_caller": false,
+      "code_is_the_caller": false,
+      "needs_discovery": false,
+      "must_be_deterministic": false,
+      "high_volume_or_latency_sensitive": false,
+      "acts_as_the_signed_in_person": false,
+      "exploratory_or_ad_hoc": false,
+      "an_api_already_exists": false,
+      "event_driven": true
+    },
+    "expected": [
+      "webhook_or_workflow"
+    ]
+  },
+  {
+    "task": "A script in CI calls an API with a fixed payload on every release",
+    "answers": {
+      "ai_client_is_the_caller": false,
+      "code_is_the_caller": true,
+      "needs_discovery": false,
+      "must_be_deterministic": true,
+      "high_volume_or_latency_sensitive": false,
+      "acts_as_the_signed_in_person": false,
+      "exploratory_or_ad_hoc": false,
+      "an_api_already_exists": true,
+      "event_driven": false
+    },
+    "expected": [
+      "api"
+    ]
+  },
+  {
+    "task": "An analyst explores a database with an AI assistant, acting as themselves",
+    "answers": {
+      "ai_client_is_the_caller": true,
+      "code_is_the_caller": false,
+      "needs_discovery": false,
+      "must_be_deterministic": false,
+      "high_volume_or_latency_sensitive": false,
+      "acts_as_the_signed_in_person": true,
+      "exploratory_or_ad_hoc": true,
+      "an_api_already_exists": false,
+      "event_driven": false
+    },
+    "expected": [
+      "mcp"
+    ]
+  },
+  {
+    "task": "A high volume service calls an internal API thousands of times a minute",
+    "answers": {
+      "ai_client_is_the_caller": false,
+      "code_is_the_caller": true,
+      "needs_discovery": false,
+      "must_be_deterministic": false,
+      "high_volume_or_latency_sensitive": true,
+      "acts_as_the_signed_in_person": false,
+      "exploratory_or_ad_hoc": false,
+      "an_api_already_exists": true,
+      "event_driven": false
+    },
+    "expected": [
+      "api"
+    ]
+  },
+  {
+    "task": "You are building a new internal service and no AI client is involved",
+    "answers": {
+      "ai_client_is_the_caller": false,
+      "code_is_the_caller": false,
+      "needs_discovery": false,
+      "must_be_deterministic": false,
+      "high_volume_or_latency_sensitive": false,
+      "acts_as_the_signed_in_person": false,
+      "exploratory_or_ad_hoc": false,
+      "an_api_already_exists": false,
+      "event_driven": false
+    },
+    "expected": [
+      "api"
+    ]
+  }
+]
